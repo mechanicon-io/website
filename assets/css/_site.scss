@@ -159,6 +159,31 @@ a { color: inherit; }
     }
   }
 
+  // Tito ticket button — matches the look of &__cta above
+  &__meta tito-button { display: inline-flex; }
+  &__meta tito-button button {
+    margin: 0;
+    font-family: var(--mc-font-mono);
+    font-weight: 700;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--mc-cyan);
+    background: transparent;
+    border: 1px solid var(--mc-cyan);
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-transform: none;
+    letter-spacing: normal;
+    box-shadow: none;
+    cursor: pointer;
+    transition: background var(--mc-ease-hover), color var(--mc-ease-hover);
+
+    &:hover {
+      background: var(--mc-cyan);
+      color: var(--mc-ink);
+    }
+  }
+
   &__burger {
     display: none;
     background: transparent;
@@ -252,6 +277,32 @@ a { color: inherit; }
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+    align-items: center;
+  }
+
+  // Tito ticket button — matches the .mc-cta.mc-cta-solid look
+  &__ctas tito-button button {
+    margin: 0;
+    display: inline-block;
+    font-family: var(--mc-font-mono);
+    font-weight: 700;
+    font-size: var(--mc-fs-body);
+    line-height: 1.5;
+    padding: var(--mc-space-sm) var(--mc-space-md);
+    border-radius: var(--mc-radius-md);
+    background: var(--mc-ink);
+    color: var(--mc-fg);
+    border: 1px solid var(--mc-ink);
+    text-transform: none;
+    letter-spacing: normal;
+    box-shadow: none;
+    cursor: pointer;
+    transition: color var(--mc-ease-hover), background var(--mc-ease-hover);
+
+    &:hover {
+      background: transparent;
+      color: var(--mc-ink);
+    }
   }
 
   &__glyph {
