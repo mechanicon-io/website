@@ -43,7 +43,7 @@ a { color: inherit; }
   }
 
   &.is-open {
-    .topnav__links { max-height: 400px; }
+    .topnav__links { max-height: 400px; visibility: visible; pointer-events: auto; }
   }
 
   &__inner {
@@ -587,24 +587,11 @@ a { color: inherit; }
 
 // ─── Schedule ───
 
-.sched-day__head {
-  display: flex;
-  align-items: baseline;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--mc-line);
-}
-
-.sched-day__time  { color: var(--mc-cyan); }
-.sched-day__label { color: var(--mc-fg); margin: 0; }
-
 .sched-rows { display: grid; gap: 6px; }
 
 .sched-row {
   display: grid;
-  grid-template-columns: 90px 1fr auto;
+  grid-template-columns: 150px 1fr;
   align-items: center;
   gap: 20px;
   padding: 16px 20px;
@@ -615,10 +602,9 @@ a { color: inherit; }
 
   &:hover { background: #2F3142; }
 
+  &--schedule { border-left-color: var(--mc-green); }
   &--talk     { border-left-color: var(--mc-purple); }
   &--workshop { border-left-color: var(--mc-orange); }
-  &--social   { border-left-color: var(--mc-pink); }
-  &--break    { border-left-color: var(--mc-fg-muted); }
   &--open, &--close { border-left-color: var(--mc-green); }
 
   &__time {
@@ -1090,7 +1076,9 @@ a { color: inherit; }
       gap: 2px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height var(--mc-ease-state);
+      visibility: hidden;
+      pointer-events: none;
+      transition: max-height var(--mc-ease-state), visibility var(--mc-ease-state);
 
       a { padding: 12px 16px; font-size: 14px; }
     }
@@ -1110,9 +1098,7 @@ a { color: inherit; }
   .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
 
   .sched-row {
-    grid-template-columns: 70px 1fr;
-
-    &__kind { grid-column: 2; justify-self: end; }
+    grid-template-columns: 120px 1fr;
   }
 
   .archive-layout .sched-row {
