@@ -1,84 +1,24 @@
-- name: CandyKeys
-  website: "https://candykeys.com"
-  image_path: "./assets/images/sponsors/candykeys.png"
-  box_background: "pure-white"
 - name: GMK
   website: "https://www.gmk-electronic-design.de"
   image_path: "./assets/images/sponsors/gmk.png"
-  box_background: "pink-purple"
-- name: Cherry
-  website: "https://www.cherrymx.de"
-  image_path: "./assets/images/sponsors/cherry.png"
+  box_background: "pure-white"
+- name: Input Gear
+  website: "https://inputgear.de"
+  image_path: "./assets/images/sponsors/input_gear.png"
   box_background: "pure-white"
 - name: keebsupply
   website: "https://keeb.supply"
   image_path: "./assets/images/sponsors/keeb-supply.png"
-  box_background: "cyan-green"
+  box_background: "pure-white"
+- name: Khor
+  website: "https://khor.store"
+  image_path: "./assets/images/sponsors/khor.png"
+  box_background: "pure-white"
 - name: Oblotzky
   website: "https://oblotzky.industries"
   image_path: "./assets/images/sponsors/oblotzky_industries_logo.png"
   box_background: "pure-white"
-- name: 42keebs
-  website: "https://42keebs.eu"
-  image_path: "./assets/images/sponsors/42keebs.png"
-  box_background: "42-keebs"
-- name: Keebart
-  website: "https://www.keebart.com/"
-  image_path: "./assets/images/sponsors/keebart.png"
-  box_background: "pure-white"
-- name: Wooting
-  website: "https://wooting.io"
-  image_path: "./assets/images/sponsors/wooting.png"
-  box_background: "yellow-pink"
-- name: Khor
-  website: "https://khor.store"
-  image_path: "./assets/images/sponsors/khor.png"
-  box_background: "pink-purple"
-- name: Cerakey
-  website: "https://www.cerakey.com"
-  image_path: "./assets/images/sponsors/cerakey.png"
-  box_background: "pure-white"
 - name: MonacoKeys
   website: "https://monacokeys.de"
   image_path: "./assets/images/sponsors/monacokeys.png"
-  box_background: "pink-purple"
-- name: Keychron
-  website: "https://keychron.de"
-  image_path:  "./assets/images/sponsors/keychron.jpg"
   box_background: "pure-white"
-- name: BINEPAD
-  website: "https://www.binepad.com"
-  image_path: "./assets/images/sponsors/binepad.png"
-  box_background: "yellow-pink"
-- name: Coffeekeys
-  website: "https://coffeekeys.eu"
-  image_path:  "./assets/images/sponsors/coffeekeys.png"
-  box_background: "42-keebs"
-- name: waifuworks
-  website: "https://linktr.ee/waifuworks"
-  image_path: "./assets/images/sponsors/waifuworks.png"
-  box_background: "pure-white"
-- name: NuPhy
-  website: "https://nuphy.com"
-  image_path:  "./assets/images/sponsors/nuphy.png"
-  box_background: "cyan-green"
-- name: Keycapsule
-  website: "https://keycapsule.shop"
-  image_path:  "./assets/images/sponsors/keycapsule.png"
-  box_background: "yellow-pink"
-- name: Monkeytype
-  website: "https://monkeytype.com"
-  image_path:  "./assets/images/sponsors/monkeytype.png"
-  box_background: "monkeytype"
-- name: Gateron
-  website: "https://www.gateron.co"
-  image_path:  "./assets/images/sponsors/gateron.jpg"
-  box_background: "pure-white"
-- name: Kamo Keyboards
-  website: "https://kamo-keyboards.com"
-  image_path:  "./assets/images/sponsors/kamo.png"
-  box_background: "kamo"
-- name: Proto[Typist]
-  website: "https://prototypist.net"
-  image_path:  "./assets/images/sponsors/prototypist.png"
-  box_background: "pink-purple"

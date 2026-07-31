@@ -883,6 +883,10 @@ a { color: inherit; }
     letter-spacing: -.02em;
   }
 
+  // Long word marks (e.g. "sponsorship") need to scale further down on
+  // narrow viewports than a 4-digit year does.
+  &--word &__year { font-size: clamp(38px, 12vw, 180px); }
+
   &__spec {
     font-size: 16px;
     line-height: 1.7;
@@ -1094,6 +1098,186 @@ a { color: inherit; }
   }
 }
 
+// ─── Sponsorship / tiers ───
+
+.spon-intro {
+  color: var(--mc-fg-muted);
+  margin: 8px 0 40px;
+
+  strong { color: var(--mc-fg); }
+}
+
+.spon-tiers {
+  display: grid;
+  gap: 24px;
+}
+
+.spon-tier {
+  background: var(--mc-surface);
+  border: 1px solid var(--mc-line);
+  border-radius: var(--mc-radius-lg);
+  padding: 36px 40px 40px;
+  transition: border-color var(--mc-ease-hover);
+
+  &--pink {
+    border-color: rgba(255, 128, 191, .4);
+    box-shadow: var(--mc-glow-pink);
+    .spon-tier__price { color: var(--mc-ink); background: var(--mc-grad-pink-purple); }
+    .spon-tier__name  { color: var(--mc-pink); }
+    .spon-list li::before { color: var(--mc-pink); }
+  }
+
+  &--cyan {
+    border-color: rgba(128, 255, 234, .4);
+    box-shadow: var(--mc-glow-cyan);
+    .spon-tier__price { color: var(--mc-ink); background: var(--mc-grad-cyan-green); }
+    .spon-tier__name  { color: var(--mc-cyan); }
+    .spon-list li::before { color: var(--mc-cyan); }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--mc-line);
+  }
+
+  &__eyebrow {
+    font-family: var(--mc-font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--mc-fg-muted);
+    margin-bottom: 8px;
+  }
+
+  &__name {
+    font-family: var(--mc-font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1;
+    letter-spacing: -.01em;
+    margin: 0;
+  }
+
+  &__price {
+    font-family: var(--mc-font-display);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1;
+    padding: 12px 20px;
+    border-radius: var(--mc-radius-md);
+    white-space: nowrap;
+  }
+
+  &__price-star {
+    font-family: var(--mc-font-mono);
+    font-size: 14px;
+    font-weight: 700;
+    vertical-align: super;
+    margin-left: 2px;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+}
+
+.spon-block__title {
+  font-family: var(--mc-font-mono);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--mc-fg);
+  margin: 0 0 14px;
+}
+
+.spon-block + .spon-block { margin-top: 28px; }
+
+.spon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--mc-font-mono);
+  font-size: 14.5px;
+  line-height: 1.7;
+
+  li {
+    color: var(--mc-fg-muted);
+    padding-left: 26px;
+    position: relative;
+    margin-bottom: 8px;
+
+    &::before {
+      content: "\2B90";
+      font-family: var(--mc-font-display);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &--rules li::before {
+    content: "\00B7";
+    font-family: var(--mc-font-mono);
+    color: var(--mc-fg-muted);
+    font-weight: 700;
+    font-size: 18px;
+    left: 4px;
+    top: -1px;
+  }
+}
+
+.spon-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    font-family: var(--mc-font-mono);
+    font-size: 13px;
+    color: var(--mc-fg);
+    padding: 6px 14px;
+    border: 1px solid var(--mc-line);
+    border-radius: 999px;
+    background: var(--mc-bg);
+  }
+}
+
+.spon-note {
+  margin: 24px 0 0;
+
+  &__star { color: var(--mc-pink); font-weight: 700; }
+}
+
+.spon-contact {
+  margin-top: 40px;
+  padding: 40px;
+  border-radius: var(--mc-radius-lg);
+  background: var(--mc-surface);
+  border: 1px solid var(--mc-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  p { margin: 0; max-width: 60ch; color: var(--mc-fg-muted); }
+  strong { color: var(--mc-fg); }
+}
+
 // ─── Responsive ───
 
 @media (max-width: 1100px) {
@@ -1140,10 +1324,21 @@ a { color: inherit; }
 
   .hero { padding: 48px 32px; }
 
+  .archive-sub {
+    padding: 32px 24px;
+    gap: 14px;
+
+    &__eyebrow { letter-spacing: .08em; }
+    &__spec { font-size: 15px; }
+  }
+
   .about-grid,
   .venue-grid,
   .stay-grid,
+  .spon-tier__body,
   .archive-layout { grid-template-columns: 1fr; }
+
+  .spon-tier { padding: 28px 24px 32px; }
 
   .history-grid,
   .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
