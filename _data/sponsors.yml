@@ -22,3 +22,7 @@
   website: "https://monacokeys.de"
   image_path: "./assets/images/sponsors/monacokeys.png"
   box_background: "pure-white"
+- name: ZSA Technology Labs
+  website: "https://zsa.io"
+  image_path: "./assets/images/sponsors/zsa.png"
+  box_background: "pure-white"
