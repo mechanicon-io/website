@@ -26,3 +26,7 @@
   website: "https://zsa.io"
   image_path: "./assets/images/sponsors/zsa.png"
   box_background: "pure-white"
+- name: artifact
+  website: "https://www.artifact-industries.com"
+  image_path: "./assets/images/sponsors/artifact.png"
+  box_background: "pure-white"
