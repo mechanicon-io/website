@@ -821,10 +821,9 @@ a { color: inherit; }
   margin-top: 64px;
   padding: 24px 0;
   border-top: 1px solid var(--mc-line);
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 32px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   font-family: var(--mc-font-mono);
   font-size: 13px;
   color: var(--mc-fg-muted);
@@ -839,7 +838,26 @@ a { color: inherit; }
 
   .sep { margin: 0 8px; opacity: .5; }
 
-  &__center { text-align: center; }
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: center;
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: baseline;
+    padding-top: 20px;
+    border-top: 1px solid var(--mc-line);
+  }
+
+  &__since {
+    text-align: right;
+    white-space: nowrap;
+  }
 
   &__right {
     display: flex;
@@ -894,6 +912,31 @@ a { color: inherit; }
     font-weight: 700;
     margin: 0;
     max-width: 60ch;
+  }
+}
+
+// Verein page hero: the full association name set as one bold word mark,
+// no eyebrow or spec line. "mechanicon" leads big, the legal name follows
+// a tier smaller so the long "eingabegerätekultur" still fits on mobile.
+.verein-hero {
+  gap: 0;
+
+  &__name {
+    margin: 0;
+    display: grid;
+    gap: .04em;
+    font-family: var(--mc-font-display);
+    font-weight: 700;
+    color: var(--mc-ink);
+    letter-spacing: -.02em;
+    line-height: .84;
+  }
+
+  &__lead { font-size: clamp(52px, 15vw, 168px); }
+
+  &__sub {
+    font-size: clamp(28px, 7vw, 76px);
+    line-height: .9;
   }
 }
 
@@ -1352,10 +1395,16 @@ a { color: inherit; }
   }
 
   .site-footer {
-    grid-template-columns: 1fr;
     text-align: center;
-    gap: 12px;
 
+    &__top,
+    &__bottom {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      justify-items: center;
+    }
+
+    &__since { text-align: center; }
     &__right { justify-content: center; }
   }
 }
