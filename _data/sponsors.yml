@@ -30,3 +30,19 @@
   website: "https://www.artifact-industries.com"
   image_path: "./assets/images/sponsors/artifact.png"
   box_background: "pure-white"
+- name: NBH
+  website: "#"
+  image_path: "./assets/images/sponsors/nbh.svg"
+  box_background: "pure-white"
+- name: thockfactory
+  website: "https://thockfactory.com"
+  image_path: "./assets/images/sponsors/thockfactory.svg"
+  box_background: "pure-white"
+- name: Smollab
+  website: "https://smollab.co"
+  image_path: "./assets/images/sponsors/smollab.png"
+  box_background: "pure-white"
+- name: bowlkeyboards
+  website: "https://bowlkeyboards.com"
+  image_path: "./assets/images/sponsors/bowlkeyboards.png"
+  box_background: "pure-white"
