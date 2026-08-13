@@ -1,3 +1,8 @@
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
-  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube-nocookie.com/embed/{{include.video_id}}?controls=1&modestbranding=1&rel=0&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="yt-embed" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
+  <button type="button" class="yt-facade" data-video-id="{{ include.video_id }}"
+          aria-label="Load video from YouTube — this connects to Google">
+    <span class="yt-facade__play" aria-hidden="true">&#x25B6;</span>
+    <span class="yt-facade__label">Load video</span>
+    <span class="yt-facade__hint">YouTube &middot; loads only on click &middot; <a href="/imprint#youtube">privacy</a></span>
+  </button>
 </div>

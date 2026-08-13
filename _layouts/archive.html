@@ -39,9 +39,9 @@ layout: default
     {% if page.videos %}
     <div class="archive-videos">
       {% for vid in page.videos %}
-      <div class="archive-videos__item">
+      <div class="video-embed">
         {% include youtube_video.html video_id=vid.id %}
-        {% if vid.caption %}<p class="mc-small mc-text-muted" style="margin: 8px 0 8px 8px;">{{ vid.caption }}</p>{% endif %}
+        {% if vid.caption %}<p class="video-embed__caption mc-small">{{ vid.caption }}</p>{% endif %}
       </div>
       {% endfor %}
     </div>
