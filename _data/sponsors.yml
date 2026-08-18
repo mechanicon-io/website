@@ -46,3 +46,7 @@
   website: "https://bowlkeyboards.com"
   image_path: "./assets/images/sponsors/bowlkeyboards.png"
   box_background: "pure-white"
+- name: shopgalactica
+  website: "https://shopgalactica.com"
+  image_path: "./assets/images/sponsors/shopgalactica.png"
+  box_background: "pure-white"
