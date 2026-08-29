@@ -50,3 +50,11 @@
   website: "https://shopgalactica.com"
   image_path: "./assets/images/sponsors/shopgalactica.png"
   box_background: "pure-white"
+- name: Cherry
+  website: "https://www.cherry.de"
+  image_path: "./assets/images/sponsors/cherry.png"
+  box_background: "pure-white"
+- name: Cerakey
+  website: "https://www.cerakey.com"
+  image_path: "./assets/images/sponsors/cerakey.png"
+  box_background: "pure-white"
