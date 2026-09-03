@@ -58,3 +58,7 @@
   website: "https://www.cerakey.com"
   image_path: "./assets/images/sponsors/cerakey.png"
   box_background: "pure-white"
+- name: Hator
+  website: "https://www.hator.com"
+  image_path: "./assets/images/sponsors/hator.png"
+  box_background: "pure-white"
