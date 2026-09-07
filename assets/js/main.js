@@ -70,6 +70,15 @@
   });
 })();
 
+// Shuffle sponsor logos on the homepage so no sponsor gets a fixed position
+(function () {
+  var grid = document.querySelector('#sponsors .sponsor-grid');
+  if (!grid) return;
+  var tiles = Array.prototype.slice.call(grid.children);
+  tiles.sort(function () { return Math.random() - 0.5; });
+  tiles.forEach(function (tile) { grid.appendChild(tile); });
+})();
+
 // Mailjet newsletter click-to-load — form loads only on click
 (function () {
   document.addEventListener('click', function (e) {
