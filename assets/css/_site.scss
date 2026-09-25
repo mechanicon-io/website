@@ -660,6 +660,24 @@ a { color: inherit; }
   &--workshop { border-left-color: var(--mc-orange); }
   &--open, &--close { border-left-color: var(--mc-green); }
 
+  // Rows carrying a longer description grow tall — keep time and badge
+  // pinned to the first line instead of floating to the vertical middle,
+  // and stack the badge under the time rather than trailing the text block.
+  &--has-desc {
+    align-items: start;
+    row-gap: 0;
+
+    .sched-row__time { grid-row: 1; grid-column: 1; }
+
+    .sched-row__kind {
+      grid-row: 2;
+      grid-column: 1;
+      margin-top: 8px;
+    }
+
+    > div:nth-child(2) { grid-row: 1 / span 2; grid-column: 2; }
+  }
+
   &__time {
     font-family: var(--mc-font-mono);
     font-weight: 700;
@@ -686,6 +704,51 @@ a { color: inherit; }
     margin-top: 2px;
   }
 
+  &__desc {
+    margin-top: 10px;
+
+    summary {
+      font-family: var(--mc-font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--mc-fg-muted);
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color var(--mc-ease-hover);
+
+      &::-webkit-details-marker { display: none; }
+
+      &::before {
+        content: "\2B90";
+        font-family: var(--mc-font-display);
+        font-size: 14px;
+        line-height: 1;
+        transition: transform var(--mc-ease-state);
+      }
+
+      &:hover { color: var(--mc-fg); }
+    }
+
+    &[open] > summary {
+      color: var(--mc-fg);
+
+      &::before { transform: rotate(90deg); }
+    }
+
+    p {
+      font-family: var(--mc-font-mono);
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--mc-fg-muted);
+      max-width: 68ch;
+      margin: 10px 0 0;
+    }
+  }
+
   &__kind {
     font-family: var(--mc-font-mono);
     font-size: 10.5px;
@@ -694,6 +757,8 @@ a { color: inherit; }
     padding: 4px 10px;
     border-radius: 999px;
     border: 1px solid currentColor;
+    // Hug the label instead of stretching across the grid column.
+    justify-self: start;
   }
 }
 
