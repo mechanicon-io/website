@@ -2,9 +2,9 @@
   website: "https://www.gmk-electronic-design.de"
   image_path: "./assets/images/sponsors/gmk.png"
   box_background: "pure-white"
-- name: Input Gear
-  website: "https://inputgear.de"
-  image_path: "./assets/images/sponsors/input_gear.png"
+- name: Keebhawk
+  website: "https://keebhawk.com"
+  image_path: "./assets/images/sponsors/keebhawk.png"
   box_background: "pure-white"
 - name: keebsupply
   website: "https://keeb.supply"
