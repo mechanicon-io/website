@@ -36,6 +36,9 @@ twitter:
 author:
   twitter: mechanicon
 
+sass:
+  sass_dir: assets/css
+
 # Build settings
 # theme: minima
 plugins:
